@@ -1,0 +1,48 @@
+.checkout-container {
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.summary-list {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.summary-item {
+  display: grid;
+  grid-template-columns: 60px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: var(--card-bg, #fff);
+  border-radius: var(--radius, 8px);
+  box-shadow: var(--shadow-sm);
+}
+
+.summary-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.summary-item .text span {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.totals {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+  background: var(--card-bg, #fff);
+  border-radius: var(--radius, 8px);
+  box-shadow: var(--shadow-sm);
+}
+
+.totals .grand {
+  margin-top: 8px;
+  font-weight: 700;
+}

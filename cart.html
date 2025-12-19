@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/cart.css" />
+  <script type="module" src="assets/js/cart-page.js"></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="nav">
+      <a href="index.html" class="brand">iTISHA</a>
+      <div class="nav-actions">
+        <a href="login.html">Login</a>
+        <a href="register.html">Sign Up</a>
+        <a href="cart.html" class="cart">🛒 <span id="cart-count">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- CART MAIN -->
+  <main class="cart-container">
+    <h1 class="section-title">Your Cart</h1>
+    <section id="cart-list" class="cart-list"></section>
+
+    <aside class="cart-summary">
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <strong class="currency">Ksh <span id="subtotal">0</span></strong>
+      </div>
+      <button id="checkout-btn" class="btn-primary">Proceed to Checkout</button>
+    </aside>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    © 2025 iTISHA — Built for Local Commerce
+  </footer>
+</body>
+</html>

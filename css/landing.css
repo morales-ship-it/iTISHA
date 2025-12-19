@@ -1,0 +1,58 @@
+/* VERIFIED SHOPS (GRID) */
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.shop-card {
+  text-align: center;
+}
+
+.shop-card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin: auto;
+  border: 3px solid var(--green-primary);
+}
+
+.shop-card p {
+  margin-top: 8px;
+  font-weight: 600;
+  color: var(--green-primary);
+}
+
+/* VERIFIED SELLERS LIST */
+.seller-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: white;
+  padding: 14px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 14px;
+}
+
+.seller-row img {
+  width: 80px;
+  height: 60px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.visit-btn {
+  margin-left: auto;
+  background: var(--green-primary);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+}
+
+/* RESPONSIVE (landing-specific) */
+@media (max-width: 768px) {
+  .shop-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 per row mobile */
+  }
+}

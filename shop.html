@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shop | iTISHA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonts & Brand Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/shop.css">
+</head>
+<body class="shop-page">
+
+  <header class="header">
+  <div class="nav">
+    <div class="brand">iTISHA</div>
+    <div class="nav-actions">
+      <a href="login.html">Login</a>
+      <a href="register.html">Sign Up</a>
+      <a href="cart.html" class="cart">🛒 <span id="cart-count">0</span></a>
+    </div>
+  </div>
+</header>
+
+  <!-- SHOP HERO -->
+  <section class="shop-hero hero">
+    <img id="shop-image" alt="Shop banner" />
+    <h1 id="shop-name">Shop Name</h1>
+    <p id="shop-desc">Fresh products delivered fast</p>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section id="category-row" class="categories"></section>
+
+  <!-- PRODUCTS GRID -->
+  <section class="section">
+    <h2 class="section-title">Products</h2>
+    <div class="products-grid" id="shop-products"></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    © 2025 iTISHA — Built for Local Commerce
+  </footer>
+
+  <script type="module" src="js/shop.js"></script>
+</body>
+</html>

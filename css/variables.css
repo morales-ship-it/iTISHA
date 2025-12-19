@@ -1,0 +1,18 @@
+:root {
+  /* Brand colors (Leafy Delights mood) */
+  --green-primary: #228B22;
+  --green-dark: #1E7A53;
+  --orange-accent: #C96B28;
+  --charcoal: #36454F;
+  --ivory: #FFFFF0;
+
+  /* UI */
+  --bg-main: #f9f9f9;
+  --white: #ffffff;
+  --shadow-soft: 0 4px 14px rgba(0,0,0,0.08);
+  --radius-lg: 16px;
+  --radius-md: 10px;
+
+  /* Typography */
+  --font-main: 'Montserrat', system-ui, sans-serif;
+}
