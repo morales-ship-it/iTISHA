@@ -31,24 +31,25 @@ function renderCart() {
       </div>
 
       <div class="cart-item-controls">
-        <button class="qty-btn minus" data-id="${item.id}">−</button>
+        <!-- ✅ unified button classes -->
+        <button class="btn-minus" data-id="${item.id}">−</button>
         <span class="item-count">${item.qty}</span>
-        <button class="qty-btn plus" data-id="${item.id}">+</button>
+        <button class="btn-plus" data-id="${item.id}">+</button>
       </div>
 
       <div class="line-total">Ksh ${item.lineTotal}</div>
     </div>
   `).join("");
 
-  subtotalEl.textContent = `${subtotal}`;
+  subtotalEl.textContent = subtotal.toLocaleString();;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   const list = document.getElementById("cart-list");
 
   list.addEventListener("click", (e) => {
-    const minus = e.target.closest(".minus");
-    const plus = e.target.closest(".plus");
+    const minus = e.target.closest(".btn-minus");
+    const plus = e.target.closest(".btn-plus");
     const remove = e.target.closest(".remove-btn");
     if (!minus && !plus && !remove) return;
 

@@ -20,9 +20,12 @@
   <div class="nav">
     <div class="brand">iTISHA</div>
     <div class="nav-actions">
-      <a href="login.html">Login</a>
-      <a href="register.html">Sign Up</a>
-      <div class="cart">🛒 <span id="cart-count">0</span></div>
+      <!-- ✅ Login goes to auth.html with login tab -->
+      <a href="auth.html" class="btn-secondary">Login</a>
+      <!-- ✅ Sign Up goes to auth.html with register tab active -->
+      <a href="auth.html?tab=register" class="btn-primary">Sign Up</a>
+      <!-- ✅ Cart icon -->
+      <div class="cart" id="cart-icon">🛒 <span id="cart-count">0</span></div>
     </div>
   </div>
 </header>
@@ -43,7 +46,7 @@
 </section>
 
 <footer class="footer">
-  © 2025 iTISHA | Codded By Morales
+  © 2025 iTISHA.com | Codded By Towett Amos
 </footer>
 
 </body>

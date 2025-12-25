@@ -1,5 +1,5 @@
 import { shops, products } from "./data.js";
-import { addToCart, removeFromCart } from "./cart.js";
+import { addToCart, removeFromCart, getCartItems } from "./cart.js";
 
 /* =========================
    GET SHOP ID
@@ -79,7 +79,7 @@ function renderProducts(filter = "All") {
         <p>Ksh ${p.price}</p>
         <div class="controls">
           <button class="btn-minus" aria-label="Remove from cart">−</button>
-          <span class="item-count">0</span>
+          <span class="item-count" data-id="${p.id}">0</span>
           <button class="btn-plus" aria-label="Add to cart">+</button>
         </div>
       </div>
@@ -99,11 +99,35 @@ function renderProducts(filter = "All") {
     if (plus) {
       e.preventDefault();
       addToCart(productId);
+      updateItemCount(productId);
     }
     if (minus) {
       e.preventDefault();
       removeFromCart(productId);
+      updateItemCount(productId);
     }
+  });
+
+  // ✅ Sync counts on initial render
+  syncAllItemCounts();
+}
+
+/* =========================
+   ITEM COUNT SYNC
+========================= */
+function updateItemCount(productId) {
+  const items = getCartItems();
+  const found = items.find(i => i.id === productId);
+  const el = document.querySelector(`.item-count[data-id="${productId}"]`);
+  if (el) el.textContent = found ? found.qty : 0;
+}
+
+function syncAllItemCounts() {
+  const items = getCartItems();
+  document.querySelectorAll(".item-count").forEach(el => {
+    const productId = el.getAttribute("data-id");
+    const found = items.find(i => i.id === productId);
+    el.textContent = found ? found.qty : 0;
   });
 }
 

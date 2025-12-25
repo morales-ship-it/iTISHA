@@ -47,19 +47,19 @@ export const shops = [
   {
     id: "shop007",
     name: "Kebenei's Choma Village",
-    img: "assets/images/shops/t-bone-steak-and-ugali.jpg",
+    img: "assets/images/shops/24-hours-corner-shop-high-holborn-london-england-uk-D549J1.jpg",
     description: "Convenience store for everyday needs",
     categories: ["Groceries", "Snacks"]
   },
   {
-    id: "shop007",
+    id: "shop008",
     name: "Mathais Supermarket",
     img: "assets/images/shops/24-hours-corner-shop-high-holborn-london-england-uk-D549J1.jpg",
     description: "Convenience store for everyday needs",
     categories: ["Groceries", "Snacks"]
   },
   {
-    id: "shop007",
+    id: "shop009",
     name: "Trade Center Karatina",
     img: "assets/images/shops/24-hours-corner-shop-high-holborn-london-england-uk-D549J1.jpg",
     description: "Convenience store for everyday needs",
@@ -120,5 +120,4 @@ export const products = [
 { id: "p38", shopId: "shop005", name: "Sugar 2kg", price: 300, img: "assets/images/products/lyle1kg-46_1100x_02b44d4e-3aa2-4da1-a160-2d01b06ff843.webp", category: "Groceries", description: "Fine white sugar for cooking and baking.", popularity: 81 },
 { id: "p39", shopId: "shop005", name: "Chocolate Bar", price: 120, img: "assets/images/products/23686_main.avif", category: "Snacks", description: "Delicious milk chocolate bar.", popularity: 85 },
 { id: "p40", shopId: "shop005", name: "Salt 1kg", price: 90, img: "assets/images/products/Kensalt Iodated Table Salt 1Kg.jpg", category: "Groceries", description: "Refined table salt for everyday use.", popularity: 77 },
-
 ]

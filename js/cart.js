@@ -77,3 +77,17 @@ export function clearCart() {
   saveCart();
   updateCartCountUI();
 }
+
+/* ✅ NEW: Initialize cart count on page load and make cart icon clickable */
+document.addEventListener("DOMContentLoaded", () => {
+  loadCart();
+  updateCartCountUI();
+
+  const cartIcon = document.getElementById("cart-icon");
+  if (cartIcon) {
+    cartIcon.style.cursor = "pointer";
+    cartIcon.addEventListener("click", () => {
+      window.location.href = "cart.html";
+    });
+  }
+});

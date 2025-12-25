@@ -90,9 +90,12 @@ button {
 }
 
 .brand {
-  font-weight: 700;
+  font-weight: 700;              /* bold */
+  font-family: var(--font-main); /* Montserrat */
+  color: var(--green-primary);   /* brand green */
   font-size: 1.6rem;
-  color: var(--green-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .nav-actions {
@@ -195,7 +198,7 @@ button {
   color: var(--charcoal);
 }
 
-/* CART CONTROLS */
+/* CART CONTROLS (Landing + Shop) */
 .controls {
   display: flex;
   justify-content: center;
@@ -222,11 +225,46 @@ button {
   color: var(--green-primary);
 }
 
+/* ✅ GLOBAL PLUS/MINUS BUTTONS (shared across all pages) */
+.btn-minus,
+.btn-plus {
+  background: var(--green-primary);
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-minus:hover,
+.btn-plus:hover {
+  background: var(--green-dark);
+}
+
+.btn-minus:focus,
+.btn-plus:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 128, 0, 0.3);
+}
+
 /* FOOTER */
 .footer {
   background: var(--charcoal);
   color: #ddd;
   text-align: center;
-  padding: 24px;
+  padding: 16px;
   margin-top: 40px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+body {
+  padding-bottom: 10px; /* ensures all page content clears the footer */
 }

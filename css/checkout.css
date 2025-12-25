@@ -33,13 +33,17 @@
   opacity: 0.8;
 }
 
+/* ✅ Centered totals section */
 .totals {
-  display: grid;
+  display: flex;              /* switch to flex for easy centering */
+  flex-direction: column;     /* stack rows vertically */
+  align-items: center;        /* center horizontally */
   gap: 8px;
-  padding: 12px;
+  padding: 16px;
   background: var(--card-bg, #fff);
   border-radius: var(--radius, 8px);
   box-shadow: var(--shadow-sm);
+  text-align: center;         /* center text inside rows */
 }
 
 .totals .grand {
