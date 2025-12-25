@@ -1,3 +1,50 @@
+/* Global reset for mobile friendliness */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* prevent sideways scrolling */
+}
+
+/* Make images scale */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make containers flexible */
+.container, main, section {
+  width: 100%;
+  padding: 0 16px; /* safe spacing on small screens */
+  box-sizing: border-box;
+}
+
+/* Responsive typography */
+h1, h2, h3, p {
+  word-wrap: break-word;
+}
+
+/* Buttons and inputs scale */
+button, input, select {
+  max-width: 100%;
+}
+
+/* Mobile first adjustments */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column; /* stack menu items */
+  }
+
+  .grid {
+    grid-template-columns: 1fr; /* single column on mobile */
+  }
+
+  .auth-card, .product-card {
+    width: 100%; /* full width cards */
+    margin-bottom: 20px;
+  }
+}
+   /*rushy changes ends here*/
 /* RESET + GLOBAL */
 * {
   margin: 0;
